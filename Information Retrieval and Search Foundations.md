@@ -123,7 +123,7 @@ Limitation
 
 
 
-TF IDF gives more weight to a document based on existance of more keyword which leads to incorrect results like if “wheat” appeared 40 times, the score becomes 40 × 1.3 = 52 —
+TF IDF gives more weight to a document based on existance of more keyword which leads to incorrect results like if “wheat” appeared 40 times, the score becomes 40 × 1.3 = 52,
 that’s too much. TF-IDF doesn’t know when to stop giving extra weight.
 
 
@@ -158,7 +158,7 @@ On higher level it initially works the same as keyword search but difference com
 
 
 
-Query: "how to boost wheat production" → [0.56, 0.12, -0.43, 0.88, ...]
+Query: "how to boost wheat production" → [0.56, 0.12, -0.43, 0.88, ..]
 Document: "methods to improve crop yield" → [0.54, 0.10, -0.39, 0.86, ...]
 
 
