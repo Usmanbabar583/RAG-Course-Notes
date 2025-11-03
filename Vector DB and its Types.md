@@ -132,19 +132,39 @@ Now we are ready for vector data search
 
 
 
-Use Weaviate Vector DB
+
+
+
+**Chroma DB
+**
 
 
 
 
-1-> Create and load Client
+
+
+Chroma (ChromaDB) is a lightweight, open-source vector database designed primarily for local and embedded use — especially in LLM/RAG (Retrieval-Augmented Generation) applications.
+
+
+It’s easy to use directly inside Python or JavaScript — no external server or heavy setup needed.
 
 
 
+When to Choose Chroma DB
 
+1-> Choose Chroma when you need:
+2-> Simple local storage for embeddings
+3-> Fast experimentation or small-scale RAG demos
+4-> Lightweight, minimal dependency setup
+Everything running inside one Python process (no networking)
 
-The Weaviate client is your program’s connection interface — a Python (or JS/Java/etc.) object that lets your code communicate with the Weaviate server.Normally, Weaviate runs as a separate server but here no need for a separate server. Starts Weaviate locally and gives you a client to talk to it (the variable client).
+Ideal for:
 
+Jupyter notebooks
+
+Local RAG prototypes
+
+LLM apps under development
 
 
 
