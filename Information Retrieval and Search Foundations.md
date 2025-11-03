@@ -1,0 +1,140 @@
+**Lecture Retriever Introduction**
+
+
+A retriever helps llm to find documents in knowledge base (outside its training data) to provide best possible results. In this module we will learn different primary techniques reteriever use to accomplish its taks.
+
+
+<img width="967" height="320" alt="image" src="https://github.com/user-attachments/assets/2a446a2f-dcad-4b10-9197-942309d4c084" />
+
+
+
+**Overview of Reteriever Architecture**
+
+Overall RAG Architecture
+
+Whenever we give prompt to RAG based llm. Prompt is send to the reteriever, then reteriever has the access to the knowledge base (bunch of text files sitting in the database. A reteriever needs to quickly decide
+which documents are most relevant to the prompt and turn them to pass to the llm.
+
+
+<img width="847" height="457" alt="image" src="https://github.com/user-attachments/assets/ec3663c0-c05e-440f-bf10-b13b01686251" />
+
+
+Most reterivers use two search techniques as part of this process. 
+
+
+1---> Keyword Search 
+
+
+It is more traditional search technique in which reteriever looks for the documents that contains the exact words found in the prompt. This approach is time tested and has powered informations for decades.
+
+
+
+2---> Sementic Search
+
+
+
+In this technique reteriever looks for the documents that has the same meaning to the prompt. This approach makes reteriever more flexible by finding relevant documents but might not contain the exact words used in the prompt
+
+
+
+
+**Hybrid Search**
+
+
+
+It uses multiple techniques to produce final documents in the ranking. 
+
+
+
+
+<img width="1021" height="463" alt="image" src="https://github.com/user-attachments/assets/ae6d1e46-aa7b-4cd5-91a5-440f5c6a2e30" />
+
+
+
+
+
+
+
+
+**MetaData Filtering**
+
+Metadata means data about the data. After a search (keyword or semantic), you might get 20–50 documents that match somehow, but not all are useful.
+You can narrow them down by applying metadata filters.
+
+It removes irrelevant results  Keep only the most context-appropriate documents and Save time and improve accuracy.
+
+Paid and non-paid articles is the example. If we want unpaid articles of our favorite author we implement metadata filter to drop all paid articles and allow only unpaid to pass to the llm.
+
+
+
+<img width="972" height="451" alt="image" src="https://github.com/user-attachments/assets/4a16c528-f377-4da0-87a9-a8f10f8b9bd5" />
+
+
+
+
+Keyword Search 
+
+This technique is used in browsers and database engines for decades. This technique retrieve documents based on wether they share words in common with the prompt. The idea is to collect all the documents that has more words in common with the prompt.
+because they are more likely to be relevant. 
+
+
+
+
+How it Works
+
+
+
+
+Both documents and prompt treated as bag of words which means order of words does not matter instead all what it matters is how often a word appears in the prompt. 
+<img width="1041" height="523" alt="image" src="https://github.com/user-attachments/assets/43cf0fc7-a422-4ca6-b0f6-68973911dca3" />
+
+
+
+These words are stored in vectors. Each vector has specific spot in the system's vocabulary. Then they are treated as grid where each document is a column and each word is row
+
+
+
+
+
+**TF-IDF (Term Frequency – Inverse Document Frequency) VS BM25
+**
+
+
+
+Both these techniques are used to find the most relevant document by giving scores to each document using how often a word appears yet they have differences in their working.
+
+
+
+
+TF-IDF
+
+
+TF (Term Frequency)---> Counts how many times a word appears in a document. e.g, if apple appears 5 times in a document of 100 words then TF = 5/100 = 0.05
+
+IDF (Inverse Document Frequency)--> Checks how common the word is across all documents.e.g, if “apple” appears in 1000 documents out of 10,000 then IDF = log(10,000 / 1000) = 1
+
+TF-IDF finds documents based on how often a keyword appears in them.
+
+
+
+
+Limitation
+
+
+
+
+
+
+BM25
+
+
+
+
+
+
+Sementic Search
+
+On higher level it initially works the same as keyword search but difference comes in storing vectors. For storing vectors semantic search uses a special methamatical model called embedding
+
+
+
