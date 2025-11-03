@@ -158,5 +158,13 @@ On higher level it initially works the same as keyword search but difference com
 
 
 
+Query: "how to boost wheat production" → [0.56, 0.12, -0.43, 0.88, ...]
+Document: "methods to improve crop yield" → [0.54, 0.10, -0.39, 0.86, ...]
+
+
+
+
+
+
 
 
