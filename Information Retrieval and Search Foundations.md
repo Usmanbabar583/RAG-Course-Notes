@@ -19,6 +19,54 @@ which documents are most relevant to the prompt and turn them to pass to the llm
 <img width="847" height="457" alt="image" src="https://github.com/user-attachments/assets/ec3663c0-c05e-440f-bf10-b13b01686251" />
 
 
+**Flow of RAG
+**
+
+
+
+
+The very first component that receives the user's input query (prompt) is the Retriever.The LLM (Generator) only comes into play after the Retriever has finished its job.The Retriever takes the query, finds the relevant context, and combines the two. Only then is this augmented prompt given to the LLM to generate the final answer.
+
+
+
+
+
+Flow: User Query -->  Retriever -->  Augmented Prompt --> LLM (Generator) --> Answer
+
+
+
+
+
+
+
+Here is the complete, high-level process, segmented into the preparation and real-time stages:
+
+
+
+
+
+
+<img width="913" height="402" alt="image" src="https://github.com/user-attachments/assets/5518c525-0899-4c8d-b9fc-809d5483371a" />
+
+
+
+
+
+
+
+<img width="892" height="593" alt="image" src="https://github.com/user-attachments/assets/381c12fb-e7c3-47fa-bd7b-dc5b6bbe9a6e" />
+
+
+
+
+
+
+
+
+
+
+
+
 Most reterivers use two search techniques as part of this process. 
 
 
