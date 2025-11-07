@@ -5,4 +5,26 @@ RAG, or Retrieval-Augmented Generation, is an AI technique that combines the pow
 produce more accurate and contextually relevant responses. It works by first retrieving relevant information from a data source before the LLM 
 generates a response based on that retrieved context, allowing the AI to access up-to-date and specific information outside of its original training data.
 
+What LLMS Does not Do?
 
+
+1--> Lacks personal information
+
+
+
+2--> Does not access to the real world Data
+
+
+
+3--> Does not know Context
+
+
+
+Advantages of RAG
+
+
+Reducing Hallucination
+
+Injects missing information
+
+Keeps up to date information
