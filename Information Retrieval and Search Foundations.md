@@ -1,3 +1,22 @@
+**Why use RAG
+**
+
+
+
+<img width="907" height="467" alt="image" src="https://github.com/user-attachments/assets/fd401dce-700a-4e61-9673-a284c9d313d4" />
+
+
+
+**What is RAG?**
+
+
+The key idea of the RAG system is you can modify the prompt before sending it to the llm (Augmented prompt). 
+
+
+
+
+
+
 **Lecture Retriever Introduction**
 
 
