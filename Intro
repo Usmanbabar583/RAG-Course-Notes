@@ -3,4 +3,6 @@ What is RAG?
 
 RAG, or Retrieval-Augmented Generation, is an AI technique that combines the power of a large language model (LLM) with an external knowledge base to 
 produce more accurate and contextually relevant responses. It works by first retrieving relevant information from a data source before the LLM 
-generates a response based on that retrieved context, allowing the AI to access up-to-date and specific information outside of its original training data
+generates a response based on that retrieved context, allowing the AI to access up-to-date and specific information outside of its original training data.
+
+
